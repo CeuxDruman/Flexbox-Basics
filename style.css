@@ -1,0 +1,63 @@
+body {
+    background-color: lightgrey;
+}
+
+/* Flex Container Properties */
+.flex-container{
+    border : 6px solid black;
+    display: flex; /* Mandatory to make it flex */ /* Block level container */
+    /* display: inline-flex; */ /* The border adapts to the items inside the container. In reverse, it push all items to the left to avoid spaces between left border and items. */
+    /* flex-direction: row; */ /* default is row */
+    /* flex-wrap: wrap-reverse; */ /* default is nowrap. Wrap = hability to adapt to the screen size if all items doesn't fit into it. */
+    /* flex-flow: row wrap; */ /* To combine flex-direction and flex-wrap into 1 single command */
+    /* justify-content: space-evenly; */ /* default is flex-start */
+    height: 500px;
+    /*align-items: flex-end;*/ /* default is stretch */
+    /* align-content: center; */ /* the container must be wrap for it to work */
+}
+
+/* Common Flex Item Properties */
+.flex-item {
+    color: darkgreen;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    flex-basis: 400px; /* Set the "width" (main size) for all items */
+}
+
+/* Indivisuals Flex Item Properties */
+.item-1 {
+    background-color: lightgreen;
+}
+.item-2 {
+    background-color: lightcoral; 
+    /* order: 1; */ /* This is NOT being the first item. All items have order 0 by default, so this will be the LAST one (the only with order 1. */
+    /* flex-grow: 2; */ /* This item will take the free available space on the container for him */
+    /* flex-shrink: 10; */ /* Default is 1. */ /* Will try to get "10 times" less space than other items. */
+    /* flex: 0 1 auto; */ /* To combine flex-grow, flex-shrink and flex-basis */
+}
+.item-3 {
+    background-color: lightseagreen;    
+    align-self: flex-start;
+}
+.item-4 {
+    background-color: pink;  
+}
+.item-5 {
+    background-color: skyblue;
+    align-self: flex-end;  
+}
+.item-6 {
+    background-color: lightsalmon;
+    /* order: 2; */
+}
+.item-7 {
+    background-color: blue;  
+}
+.item-8 {
+    background-color: lightgrey;
+}
+.item-9 {
+    background-color: lightsteelblue;
+
+}
